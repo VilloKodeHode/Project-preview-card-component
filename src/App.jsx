@@ -1,38 +1,43 @@
 import "./App.css";
 import PRODUCT from "./assets/image-product-desktop.jpg";
+import CART from "./assets/icon-cart.svg";
 
 function App() {
   return (
-    <div className="flex h-[35rem] w-[40rem] rounded-xl flex-row bg-base-100 shadow-xl font-montserrat">
+    <div className="grid md:h-[35rem] h-[50rem]  md:w-[40rem] w-[28rem] md:grid-flow-col grid-flow-row rounded-xl bg-base-100 shadow-xl font-montserrat">
       <figure className="">
         <img
-          className="h-full w-[20rem] rounded-l-xl"
+          className="md:h-full md:w-[20rem] h-[20rem] w-full md:rounded-t-none md:rounded-l-xl rounded-t-xl"
           src={PRODUCT}
           alt="Gabrielle CHANEL"
         />
       </figure>
-      <div className="w-[20rem] pl-8 text-design-darkblue">
-        <h2 className="text-xl pt-8 text-left tracking-widest text-design-darkblue">
+
+      <div className="w-[20rem] text-design-darkblue grid grid-flow-row">
+        <h2 className="text-sm mt-8 ml-8 text-left tracking-[0.3rem] text-design-darkblue">
           PERFUME
         </h2>
-        <p className="text-design-darkblue font-fraunces text-[2.6rem] leading-10 text-left py-4">
+        <p className="text-design-darkblue ml-8 w-full font-fraunces text-[2.6rem] leading-10 text-left my-">
           Gabrielle Essence Eau De Parfum
         </p>
-        <p className="text-start">
+        <p className="text-start mx-8">
           A floral, solar and voluptuous interpretation composed by Oliver
           Polge, Perfumer-Creator for the House of CHANEL.
         </p>
-        <div className="relative text-start mx-8">
-          <p className="text-design-darkcyan font-fraunces text-3xl py-8">
+        <div className="relative flex items-center text-start mx-8">
+          <p className="text-design-darkcyan font-fraunces text-4xl">
             $149.99{" "}
-            <span className="mx-5 absolute top-1/2 -translate-y-1/2 text-base line-through font-montserrat text-design-darkgrayblue">
+            <span className="mx-5 absolute translate-y-[0.15rem] text-base line-through font-montserrat text-design-darkgrayblue">
               $169.99
             </span>
           </p>
         </div>
-        {/* <div className="flex flex-col w-fit justify-center content-end m-auto h-full">
-          <button className="bg-black">Buy Now</button>
-        </div> */}
+        <div className="flex justify-center w-full">
+          <button className="bg-design-darkcyan text-white flex justify-center items-center my-8 w-[80%] rounded-lg active:bg-emerald-900">
+            <img src={CART} className="pr-2" />
+            Add to Cart
+          </button>
+        </div>
       </div>
     </div>
   );
