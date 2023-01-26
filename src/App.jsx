@@ -4,23 +4,27 @@ import CART from "./assets/icon-cart.svg";
 
 function App() {
   return (
-    <div className="grid md:h-[35rem] h-[50rem]  md:w-[40rem] w-[28rem] md:grid-flow-col grid-flow-row rounded-xl bg-base-100 shadow-xl font-montserrat">
-      <figure className="">
-        <img
-          className="md:h-full md:w-[20rem] h-[20rem] w-full md:rounded-t-none md:rounded-l-xl rounded-t-xl"
+    <div className="grid sm:h-[35rem] h-[43rem] sm:w-[40rem] w-[24rem] sm:grid-flow-col grid-flow-row rounded-xl bg-base-100 shadow-xl font-montserrat">
+      <figure>
+        <div
+          className={`bg-[url('./assets/image-product-desktop.jpg')] bg-center sm:h-full sm:w-[20rem] h-[18rem] w-full sm:rounded-t-none sm:rounded-l-xl rounded-t-xl bg-cover`}
+        ></div>
+
+        {/* <img
+          className="sm:h-full sm:w-[20rem] h-[20rem] w-full sm:rounded-t-none sm:rounded-l-xl rounded-t-xl"
           src={PRODUCT}
           alt="Gabrielle CHANEL"
-        />
+        /> */}
       </figure>
 
-      <div className="w-[20rem] text-design-darkblue grid grid-flow-row">
-        <h2 className="text-sm mt-8 ml-8 text-left tracking-[0.3rem] text-design-darkblue">
+      <div className="w-full text-design-darkblue grid grid-flow-row">
+        <h2 className="text-sm sm:mt-8 ml-8 text-left tracking-[0.3rem] text-design-darkblue">
           PERFUME
         </h2>
-        <p className="text-design-darkblue ml-8 w-full font-fraunces text-[2.6rem] leading-10 text-left my-">
+        <p className="text-design-darkblue ml-8 sm:w-fit w-full mr-6 font-fraunces text-[2.3rem] leading-10 text-left my-">
           Gabrielle Essence Eau De Parfum
         </p>
-        <p className="text-start mx-8">
+        <p className="text-start text-[0.97rem] mx-8">
           A floral, solar and voluptuous interpretation composed by Oliver
           Polge, Perfumer-Creator for the House of CHANEL.
         </p>
@@ -33,7 +37,7 @@ function App() {
           </p>
         </div>
         <div className="flex justify-center w-full">
-          <button className="bg-design-darkcyan text-white flex justify-center items-center my-8 w-[80%] rounded-lg active:bg-emerald-900">
+          <button className="bg-design-darkcyan text-white sm:p-0 p-3 flex justify-center items-center my-8 w-[80%] rounded-lg active:bg-emerald-900">
             <img src={CART} className="pr-2" />
             Add to Cart
           </button>
