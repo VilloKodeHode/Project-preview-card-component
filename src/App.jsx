@@ -5,23 +5,20 @@ import CART from "./assets/icon-cart.svg";
 function App() {
   return (
     <div className="grid sm:h-[35rem] h-[43rem] sm:w-[40rem] w-[24rem] sm:grid-flow-col grid-flow-row rounded-xl bg-base-100 shadow-xl font-montserrat">
-      <figure>
-        <div
-          className={`bg-[url('./assets/image-product-desktop.jpg')] bg-center sm:h-full sm:w-[20rem] h-[18rem] w-full sm:rounded-t-none sm:rounded-l-xl rounded-t-xl bg-cover`}
-        ></div>
-
-        {/* <img
-          className="sm:h-full sm:w-[20rem] h-[20rem] w-full sm:rounded-t-none sm:rounded-l-xl rounded-t-xl"
+      {/* <picture
+        className={`bg-[url('./assets/image-product-desktop.jpg')] bg-center sm:h-full sm:w-[20rem] h-[18rem] w-full sm:rounded-t-none sm:rounded-l-xl rounded-t-xl bg-cover`}
+      /> */}
+      <picture className=" sm:h-full sm:w-[20rem] h-[18rem] w-full">
+        <img
+          className="h-full w-full object-cover sm:rounded-t-none sm:rounded-l-xl rounded-t-xl bg-cover"
           src={PRODUCT}
-          alt="Gabrielle CHANEL"
-        /> */}
-      </figure>
-
-      <div className="w-full text-design-darkblue grid grid-flow-row">
-        <h2 className="text-sm sm:mt-8 ml-8 text-left tracking-[0.3rem] text-design-darkblue">
-          PERFUME
+        />
+      </picture>
+      <div className="w-full text-design-darkblue bg-white grid grid-flow-row sm:rounded-r-xl rounded-b-xl ">
+        <h2 className="text-sm sm:mt-8 ml-8 text-left tracking-[0.3rem] text-design-darkblue uppercase">
+          Perfume
         </h2>
-        <p className="text-design-darkblue ml-8 sm:w-fit w-full mr-6 font-fraunces text-[2.3rem] leading-10 text-left my-">
+        <p className="text-design-darkblue ml-8 sm:w-fit w-full mr-6 font-fraunces text-[2.3rem] leading-10 text-left">
           Gabrielle Essence Eau De Parfum
         </p>
         <p className="text-start text-[0.97rem] mx-8">
